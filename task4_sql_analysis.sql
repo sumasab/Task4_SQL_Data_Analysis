@@ -54,12 +54,6 @@ FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id
 GROUP BY c.country;
 
--- Total revenue per country
-SELECT c.country, SUM(o.total_amount) AS total_revenue
-FROM customers c
-JOIN orders o ON c.customer_id = o.customer_id
-GROUP BY c.country;
-
 -- Countries with total revenue greater than 500
 SELECT c.country, SUM(o.total_amount) AS total_revenue
 FROM customers c
